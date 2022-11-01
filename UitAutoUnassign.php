@@ -7,7 +7,7 @@ require_once (INCLUDE_DIR . 'class.app.php');
 require_once('config.php'); // Added on 27.10.2022 Angel Andrades
 
 class UitAutoUnassign extends Plugin {
-	var $config_class = 'UitAutoUnassignEditedConfig'; // Added on 27.10.2022 Angel Andrades
+	var $config_class = 'UitAutoUnassignConfig'; // Added on 27.10.2022 Angel Andrades
     public function bootstrap() {
         //catch the signal from Ticket::assignToStaff
         Signal::connect('object.edited', function($ticket, $type) {
