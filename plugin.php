@@ -8,5 +8,5 @@ return [
     'author' => 'Upstart IT - edited by Angel Andrades',
     'description' => 'If a ticket gets assigned to an agent, unassign the team and vice versa',
     'url' => 'https://github.com/t-oster/osticket-auto-unassign',
-    'plugin' => 'UitAutoUnassignEdited.php:UitAutoUnassignEdited'
+    'plugin' => 'UitAutoUnassign.php:UitAutoUnassign'
 ];
