@@ -6,7 +6,7 @@ require_once INCLUDE_DIR.'class.forms.php';
 
 // Created on 27.10.2022 Angel Andrades
 
-class UitAutoUnassignEditedConfig extends PluginConfig {
+class UitAutoUnassignConfig extends PluginConfig {
 	
 	// Provide compatibility function for versions of osTicket prior to
     // translation support (v1.9.4)
