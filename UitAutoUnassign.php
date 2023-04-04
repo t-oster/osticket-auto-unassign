@@ -9,10 +9,12 @@ require_once('config.php'); // Added on 27.10.2022 Angel Andrades
 class UitAutoUnassign extends Plugin {
 	var $config_class = 'UitAutoUnassignConfig'; // Added on 27.10.2022 Angel Andrades
     public function bootstrap() {
+        //we need to fetch the config here and use it in the signal, because
+        //otherwise we will only get default config
+        $config = $this->getConfig();
         //catch the signal from Ticket::assignToStaff
-        Signal::connect('object.edited', function($ticket, $type) {
-			$config = $this->getConfig();
-            if (
+        Signal::connect('object.edited', function($ticket, $type) use ($config) {
+			if (
                 $ticket instanceof Ticket
                 && is_array($type)
                 && array_key_exists("type", $type)
